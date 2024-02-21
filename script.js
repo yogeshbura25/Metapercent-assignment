@@ -57,14 +57,13 @@ const boxes = [
 
 
   const responsiveboxes = document.getElementById("responsive-boxes");
-
   boxes.forEach(data=> {
     const card = document.createElement('div');
     card.classList.add('cards');
     card.innerHTML = `
     <img src="${data.ImageUrl}" alt=${data.Name} />
-    <p>${data.Name}</p>
-    <p>${data.ShortDesc}</p>
+    <p class="name">${data.Name}</p>
+    <p class="shortdesc">${data.ShortDesc}</p>
     <button>View</button>`;
     responsiveboxes.appendChild(card);
   });
